@@ -9,8 +9,8 @@ public class Rectangle extends Shape {
 
     public Rectangle() {
         super();
-        this.width = 0;
-        this.length = 0;
+        this.width = 1.0;
+        this.length = 1.0;
     }
 
     public Rectangle(double width, double length) {
@@ -62,7 +62,7 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return ("Rectangle" + " " + super.toString() + " Length: " + this.length + " Width " + this.width);
+        return ("Rectangle" + " " + super.toString() + " the length is " + this.length + " and the width is " + this.width);
 
     }
 }

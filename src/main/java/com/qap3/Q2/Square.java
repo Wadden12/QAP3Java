@@ -5,11 +5,11 @@ public class Square extends Rectangle{
     private double side;
 
     public Square(double side) {
-        this.side = side;
+        setSide(side);
     }
 
     public Square(double side, String colour, boolean filled){
-        this.side = side;
+        setSide(side);
         super.setColour(colour);
         super.setFilled(filled);
     }
@@ -41,7 +41,7 @@ public class Square extends Rectangle{
 
     @Override
     public double getPerimeter(){
-        return(4*side);
+        return(4 * side);
     }
 
     @Override
@@ -56,6 +56,6 @@ public class Square extends Rectangle{
 
     @Override
     public String toString(){
-        return("Square :" +  " Colour is " + super.getColour()  + " Shape is Filled " + super.isFilled() + " has a side value of " + side);
+        return("Square :" +  " Colour is " + super.getColour()  + " the shape " + super.stringFilled + " and  has a side value of " + side);
     }
 }

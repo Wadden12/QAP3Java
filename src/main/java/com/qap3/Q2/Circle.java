@@ -8,7 +8,7 @@ public class Circle  extends Shape{
 
     public Circle(){
         super();
-        this.radius =0;
+        this.radius =1.0;
     }
     public Circle(double radius) {
         this.radius = radius;
@@ -51,6 +51,6 @@ public class Circle  extends Shape{
 
     @Override
     public String toString(){
-        return("Circle" + " " + super.toString() + " Radius : " + this.radius);
+        return("Circle: " + " " + super.toString() + " with a radius of  " + this.radius);
     }
 }

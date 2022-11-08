@@ -7,15 +7,17 @@ public  abstract class Shape {
     private String colour;
     boolean filled;
 
+    String stringFilled;
+
     // Constructors
     public Shape(){
-        this.colour = "Red";
-        this.filled = false;
+        this.colour = "Green";
+        setFilled(true);
     }
 
     public Shape(String colour, boolean filled) {
         this.colour = colour;
-        this.filled = filled;
+        setFilled(filled);
     }
 
     // Getters
@@ -35,8 +37,20 @@ public  abstract class Shape {
     }
 
     public void setFilled(boolean filled) {
+
         this.filled = filled;
+        stringFilled();
     }
+
+    public void stringFilled(){
+        if(isFilled()){
+            this.stringFilled = "is filled";
+        }else{
+            this.stringFilled = " is not filled";
+        }
+    }
+
+
 
     public String formatNumber(double value){
         Formatter formatter = new Formatter();
@@ -51,6 +65,6 @@ public  abstract class Shape {
     public abstract void show();
     @Override
     public String toString(){
-        return("Colour: " + this.colour + " is Filled " + filled);
+        return("Colour is  " + this.colour +  " the shape " + this.stringFilled);
     }
 }
