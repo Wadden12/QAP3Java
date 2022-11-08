@@ -14,6 +14,12 @@ public class Person {
         setMyGender(myGender);
     }
 
+    public Person(String myName, int myAge) {
+        this.myName = myName;
+        this.myAge = myAge;
+        this.myGender = "undefined";
+    }
+
     // Getters
 
     public String getMyName() {
@@ -35,15 +41,25 @@ public class Person {
     }
 
     public void setMyAge(int myAge) {
+        if(myAge < 5){
+            try {
+                throw new AgeException("Incorrect age entered must be older than 5");
+            } catch (AgeException e) {
+                throw new RuntimeException(e);
+            }
+        }
         this.myAge = myAge;
     }
 
     public void setMyGender(String myGender) {
-        this.myGender = myGender;
+        if (myGender.toUpperCase().equals("M") || myGender.toUpperCase().equals("F")) {
+            this.myGender = myGender;
+        } else
+            System.out.println("Invalid Entry: Please or (M) Male or (F) Female.");
     }
 
     @Override
     public String toString(){
-        return(this.myName + " age: " + this.myAge + " gender: " + myGender);
+        return(this.myName + " Age: " + this.myAge + " Gender: " + myGender);
     }
 }

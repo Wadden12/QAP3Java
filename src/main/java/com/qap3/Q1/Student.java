@@ -37,6 +37,6 @@ public class Student extends Person{
     @Override
 
     public String toString(){
-        return(super.toString() + " ID Number: " + this.myIdNum + "GPA: " + this.myGPA);
+        return(super.toString() + " (" +" ID Number: " + this.myIdNum + " GPA: " + this.myGPA + ") ");
     }
 }

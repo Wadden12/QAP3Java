@@ -38,13 +38,16 @@ public class CollegeStudent extends Student {
         return stringYear;
     }
 
-
     //Setters
-
     @Override
     public void setMyAge(int age){
         if(age < 18){
-            System.out.println("Invalid Age a College student must be older than 18");
+            try {
+                throw new AgeException("Invalid Age a College student must be older than 18");
+            } catch (AgeException e) {
+                throw new RuntimeException(e);
+            }
+
         } else{
             super.setMyAge(age);
         }

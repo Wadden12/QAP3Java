@@ -41,7 +41,7 @@ public class Teacher extends Person{
     public String toString(){
         NumberFormat nf
                 = NumberFormat.getInstance(Locale.CANADA);
-        return(super.toString() + " Subject: " + this.subject + " Salary: $" + nf.format(this.salary));
+        return(super.toString() +  " Teacher: Subject: " + this.subject + " Salary: $" + nf.format(this.salary));
     }
 
 }
